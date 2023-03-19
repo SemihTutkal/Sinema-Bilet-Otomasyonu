@@ -1,0 +1,119 @@
+body{
+    background-color: #10031a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    color: #fff;
+}
+.seat{
+    background-color: #444451;
+    height: 15px;
+    width: 15px;
+    margin: 3px;
+    border-radius: 5px;
+    box-shadow: 0 3px 8px #210735;
+    transition: all;
+}
+.row{
+    display: flex;
+}
+.seat.selected{
+background-color: rgb(185, 105, 30);
+}
+.seat:not(.reserved):hover{
+    cursor: pointer;
+    transform:  scale(1.3);
+}
+.seat.reserved{
+background-color:#fff;
+}
+.seat:nth-of-type(2){
+    margin-right: 20px;
+   
+}
+.seat:nth-last-of-type(3){
+    margin-right: 20px;
+}
+
+.screen{
+    background-color: #fff;
+    height: 50px;
+    width: 100%;
+    margin: 20px 0 ;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgb(255, 255, 255,0.7);
+    transition: all;
+}
+.screen:hover{
+    transform: scale(1.1);
+}
+.movie-list{
+    margin: 20px 0;
+   
+    transition: all;
+
+}
+
+.info{
+    background-color: rgb(0, 0, 0,0.2);
+    padding: 5px 10px;
+    color: #ffffff;
+    display: flex;
+    border-radius: 25px;
+}
+
+.info li{
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 10px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+p.text span{
+color: rgb(185, 105, 30);
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+select{
+    appearance: none;
+    outline:  0;
+    box-shadow: 0;
+    border: 0 !important;
+    background:  rgb(231, 231, 231);
+    background-image: none;
+    flex: 1;
+    padding: 0 .5em;
+    color: fff;
+    cursor: pointer;
+    font-size: 1em;
+}
+.select{
+    position: relative;
+    display: flex;
+    width: 13em;
+    height: 3em;
+    line-height: 3;
+    background: rgb(10, 6, 43);
+    overflow: hidden ;
+    border-radius: .25em;
+    box-shadow: 0 3px 8px #210735;
+    transition: all;
+}
+.select::after{
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #2b2e2e;
+    cursor: pointer;
+    pointer-events: none;
+    transition: .25s all ease;
+}
+.select:hover::after{
+color: rgb(131, 85, 25);
+
+}
